@@ -1,0 +1,154 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  background-color: #b5a5a5;
+}
+.wrapper {
+  height: 200px;
+  width: 300px;
+  background-color: #36010b;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+.letter {
+  position: absolute;
+  top: 0;
+  width: 80%;
+  height: 80%;
+  background-color: #ffffff;
+  border-radius: 15px;
+  z-index: 2;
+  transition: 0.75s;
+}
+.letter p {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 30px;
+  color: #540b0b;
+  
+}
+.envelope {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-right: 150px solid #590909;
+  border-top: 100px solid transparent;
+  border-left: 150px solid #690a0a;
+  border-bottom: 100px solid #3b0606;
+  z-index: 3;
+}
+.lid {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-right: 150px solid transparent;
+  border-left: 150px solid transparent;
+  border-bottom: 100px solid transparent;
+  transform-origin: top;
+  transition: transform 0.25s linear;
+  
+}
+.lid.one {
+  border-top: 100px solid #9c021e;
+  transform: rotateX(0deg);
+  z-index: 3;
+  transition-delay: 0.75s ;
+
+}
+.lid.two {
+  border-top: 100px solid #36010b;
+  transform: rotateX(90deg);
+  transition-delay: 0,5s;
+  z-index: 1;
+
+}
+.wrapper:hover .lid.one {
+  transform: rotateX(90deg);
+  transition-delay: 0s;
+  
+}
+.wrapper:hover .lid.two {
+  transform: rotateX(180deg);
+  transition-delay: 0.25s;
+
+}
+.wrapper:hover .letter {
+  transform: translateY(-50px);
+  transition-delay: 0,4s;
+}
+  
+.countdown {
+  text-align: centre;
+}
+.image {
+  text-align: centre;
+  display: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+}
+.hidden {
+  display: none;
+}
+#custom-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  
+}
+.dialog-content button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #36010b;
+  color: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 10px;
+}
+.dialog-content {
+  background: white; /* Dialog background */
+  padding: 20px; /* Inner padding for content */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  text-align: center; /* Center the text inside */
+  max-width: 80%; /* Limit the dialog width for smaller screens */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+
+#yes-button {
+  background-color: #384dd6;
+  color: white;
+}
+#no-button {
+  background-color: #384dd6;
+  color: white;
+}
