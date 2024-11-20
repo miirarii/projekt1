@@ -17,7 +17,7 @@ function showCustomDialog() {
   });
 
   noButton.addEventListener('click', () => {
-    alert(" Thanks fine. Let's be fwb then");
+    alert("Czemó");
     dialog.classList.add('hidden'); // Hide the dialog
     // Optional: Blank the screen after No
     document.body.innerHTML = 'none';
